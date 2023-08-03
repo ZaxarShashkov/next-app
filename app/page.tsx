@@ -1,6 +1,8 @@
 import styles from './page.module.scss';
 import { Metadata } from 'next';
 import Button from './components/Button/Button';
+import Paragraph from './components/Paragraph/Paragraph';
+import Tag from './components/Tag/Tag';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -17,6 +19,19 @@ export default function Home(): JSX.Element {
 			<Button arrow='down' appearance='ghost'>
 				Button
 			</Button>
+			<Paragraph size='large'>dsada</Paragraph>
+			<Paragraph size='small'>dsada</Paragraph>
+			<Paragraph>dsada</Paragraph>
+			<Tag size='small' color='green'>
+				asdas
+			</Tag>
+			<Tag size='regular' color='primary'>
+				asdas
+			</Tag>
+			<Tag color='red' href='google.com'>
+				asdas
+			</Tag>
+			<Tag color='ghost'>asdas</Tag>
 		</main>
 	);
 }

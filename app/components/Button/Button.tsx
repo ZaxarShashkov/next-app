@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
 import styles from './Button.module.scss';
 import cn from 'classnames';
-import ArrowIcon from './Arrow.svg';
+
 
 interface ButtonProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
