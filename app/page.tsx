@@ -11,8 +11,12 @@ export default function Home(): JSX.Element {
 	return (
 		<main className={styles.main}>
 			<div className={styles.container}>container</div>
-			<Button appearance='primary'>Button</Button>
-			<Button appearance='ghost'>Button</Button>
+			<Button arrow='right' appearance='primary'>
+				Button
+			</Button>
+			<Button arrow='down' appearance='ghost'>
+				Button
+			</Button>
 		</main>
 	);
 }

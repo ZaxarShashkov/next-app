@@ -8,6 +8,14 @@
 	border-radius: 5px;
 	font-size: 14px;
 	transition: all 0.2s ease-in;
+	&__arrow {
+		display: inline-block;
+		margin-left: 10px;
+		&_down {
+			transform: rotate(90deg);
+			transition: all 0.2s ease;
+		}
+	}
 }
 
 .primary {
