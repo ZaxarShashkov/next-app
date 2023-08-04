@@ -9,7 +9,13 @@ interface TagProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTM
 	href?: string;
 }
 
-const Tag = ({ size = 'regular', children, color = 'ghost', href, ...props }: TagProps) => {
+const Tag = ({
+	size = 'regular',
+	children,
+	color = 'ghost',
+	href,
+	...props
+}: TagProps): JSX.Element => {
 	return (
 		<div
 			className={cn(styles.tag, {

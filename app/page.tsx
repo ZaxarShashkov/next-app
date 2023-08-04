@@ -1,8 +1,12 @@
+'use client';
+
 import styles from './page.module.scss';
 import { Metadata } from 'next';
 import Button from './components/Button/Button';
 import Paragraph from './components/Paragraph/Paragraph';
 import Tag from './components/Tag/Tag';
+import Rating from './components/Rating/Rating';
+import React, { useState } from 'react';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -10,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home(): JSX.Element {
+	const [rating, setRating] = useState<number>(4);
+
 	return (
 		<main className={styles.main}>
 			<div className={styles.container}>container</div>
@@ -32,6 +38,7 @@ export default function Home(): JSX.Element {
 				asdas
 			</Tag>
 			<Tag color='ghost'>asdas</Tag>
+			<Rating rating={rating} isEditable={true} setRating={setRating} />
 		</main>
 	);
 }
