@@ -1,4 +1,6 @@
 import '../globals.scss';
+import styles from './layout.module.scss';
+import cn from 'classnames';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -16,12 +18,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<>
-					<Header></Header>
-					<Sidebar></Sidebar>
-					<div>{children}</div>
-					<Footer></Footer>
-				</>
+				<div className={styles.wrapper}>
+					<Header className={styles.header}></Header>
+					<Sidebar className={styles.sidebar}></Sidebar>
+					<div className={styles.body}>{children}</div>
+					<Footer className={styles.footer}></Footer>
+				</div>
 			</body>
 		</html>
 	);
