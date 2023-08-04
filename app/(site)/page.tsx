@@ -1,11 +1,11 @@
 'use client';
 
-import styles from './page.module.scss';
+import styles from '../page.module.scss';
 import { Metadata } from 'next';
-import Button from './components/Button/Button';
-import Paragraph from './components/Paragraph/Paragraph';
-import Tag from './components/Tag/Tag';
-import Rating from './components/Rating/Rating';
+import Button from '../components/Button/Button';
+import Paragraph from '../components/Paragraph/Paragraph';
+import Tag from '../components/Tag/Tag';
+import Rating from '../components/Rating/Rating';
 import React, { useState } from 'react';
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
 
 	return (
 		<main className={styles.main}>
-			<div className={styles.container}>container</div>
+			<div className={styles.container}>Главная страница</div>
 			<Button arrow='right' appearance='primary'>
 				Button
 			</Button>
