@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import Tag from '../../components/Tag/Tag';
 import Rating from '../../components/Rating/Rating';
 import React, { useState } from 'react';
+import { Menu } from '@/app/components/Menu/Menu';
 
 export const metadata: Metadata = {
 	title: 'About',
@@ -16,6 +17,7 @@ export default function About(): JSX.Element {
 
 	return (
 		<div className={styles.main}>
+			<Menu/>
 			<div className={styles.container}>О Нас</div>
 			<Tag size='small' color='green'>
 				asdas
