@@ -1,4 +1,5 @@
-import { API } from '../api/api';
+import { API } from './_api';
+import { MenuItem } from '@/interfaces/menu.interface';
 
 export async function getMenu(firstCategory: number): Promise<MenuItem[]> {
 	const res = await fetch(API.topPage.find, {

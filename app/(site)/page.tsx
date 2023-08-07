@@ -1,13 +1,13 @@
-'use client';
-
 import styles from '../page.module.scss';
-import { Metadata } from 'next';
+import { GetStaticProps, Metadata } from 'next';
 import Button from '../components/Button/Button';
 import Paragraph from '../components/Paragraph/Paragraph';
 import Tag from '../components/Tag/Tag';
 import Rating from '../components/Rating/Rating';
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu } from '../components/Menu/Menu';
+import axios from 'axios';
+import { MenuItem } from '@/interfaces/menu.interface';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -15,12 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	const [rating, setRating] = useState<number>(4);
-
+	
 	return (
 		<main className={styles.main}>
 			<div className={styles.container}>Главная страница</div>
-			{/* <Menu /> */}
+			<Menu />
 			<Button arrow='right' appearance='primary'>
 				Button
 			</Button>
@@ -40,7 +39,12 @@ export default function Home() {
 				asdas
 			</Tag>
 			<Tag color='ghost'>asdas</Tag>
-			<Rating rating={rating} isEditable={true} setRating={setRating} />
+			<Rating isEditable={true} />
 		</main>
 	);
+}
+
+interface HomeProps {
+	data: MenuItem[];
+	firstCategory: number;
 }

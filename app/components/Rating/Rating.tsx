@@ -12,12 +12,11 @@ import cn from 'classnames';
 
 interface RatingProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	isEditable?: boolean;
-	rating: number;
-	setRating?: (rating: number) => void;
 }
 
-const Rating = ({ isEditable = false, rating, setRating, ...props }: RatingProps): JSX.Element => {
+const Rating = ({ isEditable = false, ...props }: RatingProps): JSX.Element => {
 	const [ratingArr, setRatingArr] = useState<JSX.Element[]>(new Array(5).fill(<></>));
+	const [rating, setRating] = useState<number>(4);
 
 	useEffect(() => {
 		constructRating(rating);

@@ -1,12 +1,14 @@
 import React from 'react';
-import { getMenu } from '../../api/menu';
+import { getMenu } from '../../../api/menu';
 
 export async function Menu() {
 	const menu = await getMenu(0);
+
 	return (
 		<div>
-			<div>{JSON.stringify(menu)}</div>
-			<div>{menu.length}</div>
+			{menu.map((m) => {
+				return <li>{m._id.secondCategory}</li>;
+			})}
 		</div>
 	);
 }
