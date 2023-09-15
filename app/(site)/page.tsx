@@ -8,6 +8,7 @@ import React from 'react';
 import { Menu } from '../components/Menu/Menu';
 import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -19,7 +20,6 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.container}>Главная страница</div>
-			<Menu />
 			<Button arrow='right' appearance='primary'>
 				Button
 			</Button>
@@ -40,6 +40,8 @@ export default function Home() {
 			</Tag>
 			<Tag color='ghost'>asdas</Tag>
 			<Rating isEditable={true} />
+			<Link href={'/about'}>About us</Link>
+			<Link href={'/contacts'}>Contacts</Link>
 		</main>
 	);
 }

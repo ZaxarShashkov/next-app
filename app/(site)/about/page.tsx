@@ -1,5 +1,3 @@
-'use client';
-
 import styles from '../../page.module.scss';
 import { Metadata } from 'next';
 import Tag from '../../components/Tag/Tag';
@@ -13,11 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function About(): JSX.Element {
-	const [rating, setRating] = useState<number>(4);
+	// const [rating, setRating] = useState<number>(4);
 
 	return (
 		<div className={styles.main}>
-			<Menu/>
 			<div className={styles.container}>О Нас</div>
 			<Tag size='small' color='green'>
 				asdas
@@ -29,7 +26,7 @@ export default function About(): JSX.Element {
 				asdas
 			</Tag>
 			<Tag color='ghost'>asdas</Tag>
-			<Rating rating={rating} isEditable={true} setRating={setRating} />
+			{/* <Rating rating={4} isEditable={true} /> */}
 		</div>
 	);
 }
